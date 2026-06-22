@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Productivity Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>My Productivity Dashboard</h1>
+    <div id="clock">
+      <span id="time"></span>
+      <span id="date"></span>
+    </div>
+  </header>
+
+  <main>
+    <section id="calculator" aria-label="Calculator">
+      <h2><span class="section-icon">&#x1F9EE;</span> Calculator</h2>
+      <p class="section-hint">Click the buttons or use your keyboard!</p>
+      <div id="calc-display">
+        <div id="calc-expression"></div>
+        <div id="calc-result">0</div>
+      </div>
+      <div id="calc-buttons">
+        <button class="calc-btn clear" data-value="C">C</button>
+        <button class="calc-btn op" data-value="/">&divide;</button>
+        <button class="calc-btn op" data-value="*">&times;</button>
+        <button class="calc-btn op" data-value="%">%</button>
+        <button class="calc-btn num" data-value="7">7</button>
+        <button class="calc-btn num" data-value="8">8</button>
+        <button class="calc-btn num" data-value="9">9</button>
+        <button class="calc-btn op" data-value="-">&minus;</button>
+        <button class="calc-btn num" data-value="4">4</button>
+        <button class="calc-btn num" data-value="5">5</button>
+        <button class="calc-btn num" data-value="6">6</button>
+        <button class="calc-btn op" data-value="+">+</button>
+        <button class="calc-btn num" data-value="1">1</button>
+        <button class="calc-btn num" data-value="2">2</button>
+        <button class="calc-btn num" data-value="3">3</button>
+        <button class="calc-btn equals" data-value="=">=</button>
+        <button class="calc-btn num zero" data-value="0">0</button>
+        <button class="calc-btn num" data-value=".">.</button>
+      </div>
+    </section>
+
+    <section id="notes" aria-label="Notes">
+      <h2><span class="section-icon">&#x1F4DD;</span> Notes</h2>
+      <p class="section-hint">Write down your ideas and reminders!</p>
+      <div id="notes-input-row">
+        <input type="text" id="note-input" placeholder="Type your note here..." maxlength="200">
+        <button id="add-note-btn">+ Add Note</button>
+      </div>
+      <ul id="notes-list">
+        <li class="empty-message">No notes yet. Add one above!</li>
+      </ul>
+      <button id="clear-all-btn">Clear All Notes</button>
+    </section>
+  </main>
+
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
